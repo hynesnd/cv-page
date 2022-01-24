@@ -120,7 +120,34 @@ menuColumn =
             , Font.color Colors.offWhite
             , Font.size 25
             ]
-            [ el [ alignLeft ] (text "7th Heaven") ]
+            [ el [ alignLeft ] (text "Manchester, UK") ]
+        ]
+
+
+headshotRow =
+    row [ padding 1, spacing 50 ]
+        [ el [] (image [ height <| px 150, width <| px 115 ] { src = "Headshot.jpg", description = "A picture of Neil Hynes, the site owner" })
+        , column [ alignTop ]
+            [ el [] (text "Neil Hynes")
+            , row [ spacing 15 ]
+                [ el [ Font.bold, Font.color Colors.aquamarine ] (text "LV ")
+                , el [] (text "31")
+                ]
+            , row [ spacing 15, padding 1 ]
+                [ el [ Font.bold, Font.color Colors.aquamarine ] (text "HP")
+                , column []
+                    [ el [ alignRight ] (text "340 / 340")
+                    , row [ Background.gradient { angle = 1, steps = [ Colors.ffUlBlue, Colors.offWhite ] }, height <| px 2, width <| px 105 ] [ text " " ]
+                    ]
+                ]
+            , row [ spacing 15, padding 1 ]
+                [ el [ Font.bold, Font.color Colors.aquamarine ] (text "MP")
+                , column []
+                    [ el [ alignRight ] (text "50 / 50")
+                    , row [ Background.gradient { angle = 1, steps = [ Colors.aquamarine, Colors.offWhite ] }, height <| px 2, width <| px 105 ] [ text " " ]
+                    ]
+                ]
+            ]
         ]
 
 
@@ -138,16 +165,7 @@ mainPanel =
         , Font.color Colors.offWhite
         , Font.size 25
         ]
-        [ row [ padding 10, spacing 50 ]
-            [ el [] (image [ height <| px 150, width <| px 115 ] { src = "Headshot.jpg", description = "A picture of Neil Hynes, the site owner" })
-            , column [ alignTop ]
-                [ el [] (text "Neil Hynes")
-                , paragraph []
-                    [ el [ Font.bold, Font.color Colors.aquamarine ] (text "LV ")
-                    , el [] (text "31")
-                    ]
-                ]
-            ]
+        [ headshotRow
         ]
 
 
