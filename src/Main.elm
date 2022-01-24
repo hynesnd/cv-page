@@ -1,9 +1,13 @@
 module Main exposing (..)
 
 import Browser
-import Html exposing (..)
-import Html.Attributes exposing (class)
-import Html.Events exposing (onClick)
+import Colors
+import Element exposing (..)
+import Element.Background as Background
+import Element.Border as Border
+import Element.Font as Font
+import Element.Region as Region
+import Html exposing (Html)
 
 
 
@@ -56,27 +60,91 @@ update msg model =
 
 view : Model -> Html Msg
 view model =
-    div []
-        [ heading
-        , case model.state of
-            ViewingAbout ->
-                p [] [ text "This is the about" ]
+    layout [ Background.gradient { angle = 2.14, steps = [ Colors.black, Colors.darkGrey ] }, inFront menuColumn ] <|
+        ffMenu model
 
-            ViewingCV ->
-                p [] [ text "This is the CV" ]
 
-            ViewingPortfolio ->
-                p [] [ text "This is the Portfolio" ]
+menuColumn =
+    column [ alignRight, padding 10, height fill ]
+        [ column
+            [ Border.solid
+            , Border.width 2
+            , Border.rounded 5
+            , Background.gradient { angle = 2.14, steps = [ Colors.ffUlBlue, Colors.ffLrBlue ] }
+            , alignRight
+            , height (px 330)
+            , width (px 200)
+            , spacing 4
+            , paddingXY 30 10
+            , Font.color Colors.offWhite
+            , Font.size 25
+            ]
+            [ el [] (text "Item")
+            , el [] (text "Magic")
+            , el [] (text "Materia")
+            , el [] (text "Equip")
+            , el [] (text "Status")
+            , el [] (text "Order")
+            , el [] (text "Limit")
+            , el [] (text "Config")
+            , el [] (text " ")
+            , el [] (text " ")
+            , el [] (text "Save")
+            ]
+        , column
+            [ Border.solid
+            , Border.width 2
+            , Border.rounded 5
+            , Background.gradient { angle = 2.14, steps = [ Colors.ffUlBlue, Colors.ffLrBlue ] }
+            , alignRight
+            , alignBottom
+            , width (px 200)
+            , spacing 4
+            , paddingXY 5 10
+            , Font.color Colors.offWhite
+            , Font.size 25
+            ]
+            [ row [ width fill ] [ el [ alignLeft ] (text "Time"), el [ alignRight ] (text "00:44:37") ]
+            , row [ width fill ] [ el [ alignLeft ] (text "Gil"), el [ alignRight ] (text "350") ]
+            ]
+        , row
+            [ Border.solid
+            , Border.width 2
+            , Border.rounded 5
+            , Background.gradient { angle = 2.14, steps = [ Colors.ffUlBlue, Colors.ffLrBlue ] }
+            , alignRight
+            , alignBottom
+            , width (px 375)
+            , spacing 4
+            , paddingXY 5 10
+            , Font.color Colors.offWhite
+            , Font.size 25
+            ]
+            [ el [ alignLeft ] (text "7th Heaven") ]
         ]
 
 
-heading =
-    div [ class "heading" ]
-        [ h1 [ class "header-text" ] [ text "Neil Hynes" ]
-        , p [ class "header-subtext" ] [ text "Junior Software Engineer" ]
-        , p [ class "header-subtext", onClick ViewAbout ] [ text "About" ]
-        , p [ class "header-subtext", onClick ViewCV ] [ text "CV" ]
-        , p [ class "header-subtext", onClick ViewPortfolio ] [ text "Portfolio" ]
+mainPanel =
+    column
+        [ Border.solid
+        , Border.width 2
+        , Border.rounded 5
+        , Background.gradient { angle = 2.14, steps = [ Colors.ffUlBlue, Colors.ffLrBlue ] }
+        , alignLeft
+        , height (px 810)
+        , width (px 700)
+        , spacing 4
+        , paddingXY 30 10
+        , Font.color Colors.offWhite
+        , Font.size 25
+        ]
+        [ el [] (text "Hi")
+        ]
+
+
+ffMenu model =
+    row [ width fill, height fill, alignLeft ]
+        [ mainPanel
         ]
 
 
