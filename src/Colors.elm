@@ -41,3 +41,7 @@ ffUlBlue =
 
 ffLrBlue =
     rgb255 0 0 32
+
+
+aquamarine =
+    rgb255 127 255 212
