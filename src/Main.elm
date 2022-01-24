@@ -6,7 +6,7 @@ import Element exposing (..)
 import Element.Background as Background
 import Element.Border as Border
 import Element.Font as Font
-import Element.Region as Region
+import Element.Region as Region exposing (description)
 import Html exposing (Html)
 
 
@@ -138,7 +138,16 @@ mainPanel =
         , Font.color Colors.offWhite
         , Font.size 25
         ]
-        [ el [] (text "Hi")
+        [ row [ padding 10, spacing 50 ]
+            [ el [] (image [ height <| px 150, width <| px 115 ] { src = "Headshot.jpg", description = "A picture of Neil Hynes, the site owner" })
+            , column [ alignTop ]
+                [ el [] (text "Neil Hynes")
+                , paragraph []
+                    [ el [ Font.bold ] (text "LV ")
+                    , el [] (text "31")
+                    ]
+                ]
+            ]
         ]
 
 
