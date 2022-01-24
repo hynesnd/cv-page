@@ -10604,6 +10604,7 @@ var $mdgriffith$elm_ui$Internal$Model$AlignY = function (a) {
 };
 var $mdgriffith$elm_ui$Internal$Model$Top = {$: 'Top'};
 var $mdgriffith$elm_ui$Element$alignTop = $mdgriffith$elm_ui$Internal$Model$AlignY($mdgriffith$elm_ui$Internal$Model$Top);
+var $author$project$Colors$aquamarine = A3($mdgriffith$elm_ui$Element$rgb255, 127, 255, 212);
 var $mdgriffith$elm_ui$Internal$Model$Class = F2(
 	function (a, b) {
 		return {$: 'Class', a: a, b: b};
@@ -16360,7 +16361,10 @@ var $author$project$Main$mainPanel = A2(
 									A2(
 									$mdgriffith$elm_ui$Element$el,
 									_List_fromArray(
-										[$mdgriffith$elm_ui$Element$Font$bold]),
+										[
+											$mdgriffith$elm_ui$Element$Font$bold,
+											$mdgriffith$elm_ui$Element$Font$color($author$project$Colors$aquamarine)
+										]),
 									$mdgriffith$elm_ui$Element$text('LV ')),
 									A2(
 									$mdgriffith$elm_ui$Element$el,

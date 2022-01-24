@@ -143,7 +143,7 @@ mainPanel =
             , column [ alignTop ]
                 [ el [] (text "Neil Hynes")
                 , paragraph []
-                    [ el [ Font.bold ] (text "LV ")
+                    [ el [ Font.bold, Font.color Colors.aquamarine ] (text "LV ")
                     , el [] (text "31")
                     ]
                 ]
