@@ -137,14 +137,14 @@ headshotRow =
                 [ el [ Font.bold, Font.color Colors.aquamarine ] (text "HP")
                 , column []
                     [ el [ alignRight ] (text "340 / 340")
-                    , row [ Background.gradient { angle = 1, steps = [ Colors.ffUlBlue, Colors.offWhite ] }, height <| px 2, width <| px 105 ] [ text " " ]
+                    , el [ Background.gradient { angle = 1, steps = [ Colors.ffUlBlue, Colors.offWhite ] }, height <| px 2, width <| px 105 ] Element.none
                     ]
                 ]
             , row [ spacing 15, padding 1 ]
                 [ el [ Font.bold, Font.color Colors.aquamarine ] (text "MP")
                 , column []
                     [ el [ alignRight ] (text "50 / 50")
-                    , row [ Background.gradient { angle = 1, steps = [ Colors.aquamarine, Colors.offWhite ] }, height <| px 2, width <| px 105 ] [ text " " ]
+                    , el [ Background.gradient { angle = 1, steps = [ Colors.aquamarine, Colors.offWhite ] }, height <| px 2, width <| px 105 ] Element.none
                     ]
                 ]
             ]
@@ -165,8 +165,7 @@ mainPanel =
         , Font.color Colors.offWhite
         , Font.size 25
         ]
-        [ headshotRow
-        ]
+        [ headshotRow ]
 
 
 ffMenu model =

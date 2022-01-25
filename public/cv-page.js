@@ -16140,6 +16140,8 @@ var $mdgriffith$elm_ui$Element$image = F2(
 						$mdgriffith$elm_ui$Internal$Model$Unkeyed(_List_Nil))
 					])));
 	});
+var $mdgriffith$elm_ui$Internal$Model$Empty = {$: 'Empty'};
+var $mdgriffith$elm_ui$Element$none = $mdgriffith$elm_ui$Internal$Model$Empty;
 var $author$project$Colors$offWhite = A3($mdgriffith$elm_ui$Element$rgb255, 237, 237, 237);
 var $mdgriffith$elm_ui$Internal$Model$PaddingStyle = F5(
 	function (a, b, c, d, e) {
@@ -16289,7 +16291,7 @@ var $author$project$Main$headshotRow = A2(
 										[$mdgriffith$elm_ui$Element$alignRight]),
 									$mdgriffith$elm_ui$Element$text('340 / 340')),
 									A2(
-									$mdgriffith$elm_ui$Element$row,
+									$mdgriffith$elm_ui$Element$el,
 									_List_fromArray(
 										[
 											$mdgriffith$elm_ui$Element$Background$gradient(
@@ -16303,10 +16305,7 @@ var $author$project$Main$headshotRow = A2(
 											$mdgriffith$elm_ui$Element$width(
 											$mdgriffith$elm_ui$Element$px(105))
 										]),
-									_List_fromArray(
-										[
-											$mdgriffith$elm_ui$Element$text(' ')
-										]))
+									$mdgriffith$elm_ui$Element$none)
 								]))
 						])),
 					A2(
@@ -16337,7 +16336,7 @@ var $author$project$Main$headshotRow = A2(
 										[$mdgriffith$elm_ui$Element$alignRight]),
 									$mdgriffith$elm_ui$Element$text('50 / 50')),
 									A2(
-									$mdgriffith$elm_ui$Element$row,
+									$mdgriffith$elm_ui$Element$el,
 									_List_fromArray(
 										[
 											$mdgriffith$elm_ui$Element$Background$gradient(
@@ -16351,10 +16350,7 @@ var $author$project$Main$headshotRow = A2(
 											$mdgriffith$elm_ui$Element$width(
 											$mdgriffith$elm_ui$Element$px(105))
 										]),
-									_List_fromArray(
-										[
-											$mdgriffith$elm_ui$Element$text(' ')
-										]))
+									$mdgriffith$elm_ui$Element$none)
 								]))
 						]))
 				]))
